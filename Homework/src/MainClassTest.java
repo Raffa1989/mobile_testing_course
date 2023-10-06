@@ -3,10 +3,11 @@ import org.junit.Test;
 
 public class MainClassTest {
     @Test
-    public void testGetClassNumber() {
+    public void testGetClassString() {
         MainClass mainClass = new MainClass();
-        int number = mainClass.getClassNumber();
+        String text = mainClass.getClassString();
+        boolean containsHello = text.contains("hello") || text.contains("Hello");
         Assert.assertTrue("\n" +
-                "getClassNumber method returns a number greater than 45", number > 45);
+                "the getClassString method returns a result that contains the substring \"hello\" or \"Hello\"", containsHello);
     }
 }
